@@ -5,8 +5,8 @@ class Day1:
 
     def solve_day(self):
         print("Part 1 test:\t", self.solve_part_1(self.test))
-        print("Part 1 input:\t", self.solve_part_2(self.test))
-        print("Part 2 test:\t", self.solve_part_1(self.input))
+        print("Part 1 input:\t", self.solve_part_1(self.input))
+        print("Part 2 test:\t", self.solve_part_2(self.test))
         print("Part 2 input:\t", self.solve_part_2(self.input))
 
     def read_file(self, filename):
