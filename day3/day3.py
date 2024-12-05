@@ -1,8 +1,7 @@
 import re
-import enum
 
 
-class Day2:
+class Day3:
     def __init__(self):
         self.test_1 = self.read_file("test_1.txt")
         self.test_2 = self.read_file("test_2.txt")
@@ -74,5 +73,5 @@ class Day2:
 
 
 if __name__ == "__main__":
-    day1 = Day2()
+    day1 = Day3()
     day1.solve_day()
