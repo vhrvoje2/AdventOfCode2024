@@ -33,11 +33,11 @@ class Day5:
         for page in pages:
             page_valid = True
             for rule in rules:
-                rule1, rule2 = list(map(int, rule.split("|")))
-                if rule1 in page and rule2 in page:
-                    rule1_idx = page.index(rule1)
-                    rule2_idx = page.index(rule2)
-                    if rule1_idx > rule2_idx:
+                rule_1, rule_2 = list(map(int, rule.split("|")))
+                if rule_1 in page and rule_2 in page:
+                    rule_1_idx = page.index(rule_1)
+                    rule_2_idx = page.index(rule_2)
+                    if rule_1_idx > rule_2_idx:
                         page_valid = False
                         break
             if page_valid:
@@ -76,14 +76,15 @@ class Day5:
             while apply_rules:
                 count = 0
                 for rule in rules:
-                    rule1, rule2 = list(map(int, rule.split("|")))
-                    if rule1 in page and rule2 in page:
-                        rule1_idx = page.index(rule1)
-                        rule2_idx = page.index(rule2)
-                        if rule1_idx > rule2_idx:
-                            tmp = page[rule2_idx]
-                            page[rule2_idx] = page[rule1_idx]
-                            page[rule1_idx] = tmp
+                    rule_1, rule_2 = list(map(int, rule.split("|")))
+                    if rule_1 in page and rule_2 in page:
+                        rule_1_idx = page.index(rule_1)
+                        rule_2_idx = page.index(rule_2)
+                        if rule_1_idx > rule_2_idx:
+                            page[rule_1_idx], page[rule_2_idx] = (
+                                page[rule_2_idx],
+                                page[rule_1_idx],
+                            )
                             count += 1
 
                 apply_rules = count > 0
